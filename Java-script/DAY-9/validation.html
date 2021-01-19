@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+       function validate()
+       {
+           if(document.myform.user.value=="")
+           {
+               alert("please enter the username") ;
+                document.myform.user.focus();
+                return false;
+            }
+            if(document.myform.pass.value=="")
+            {
+               alert("please enter the password") ;
+                document.myform.pass.focus();
+                return false;
+            }
+            if(document.myform.email.value=="")
+            {
+               alert("please enter the email") ;
+                document.myform.email.focus();
+                return false;
+            }
+           
+            if(document.myform.number.value==""|| isNaN(document.myform.number.value)||document.myform.number.value.length!=10)
+            {
+               alert("please enter the valid number");
+                document.myform.number.focus();
+                return false;
+            }
+            if(document.myform.gender[0].checked==false && document.myform.gender[1].checked==false)
+            {
+               alert("please select a gender");
+                document.myform.gender.focus();
+                return false;
+            }
+            if(document.myform.city.value=="select")
+            {
+               alert("please enter the city");
+                document.myform.city.focus();
+                return false;
+            }
+            return true;
+            
+       }
+   </script>
+</head>
+<body>
+    <form name="myform" onsubmit="return(validate())">
+        <table>
+        <tr><td>Name</td><td><input type="text" name="user"></td></tr>
+        <tr><td>password</td><td><input type="password" name="pass"></td></tr>
+        <tr><td>email</td><td><input type="text" name="email"></td></tr>
+        <tr><td>mobile</td><td><input type="text" name="number"></td></tr>
+
+        <tr><td>Gender</td><td><input type="radio" name="gender">Male <input type="radio" name="gender">Female</td></tr>
+        <tr><td>city</td><td><select name="city">
+            <option value="select">select</option>
+            <option value="chennai">chennai</option>
+            <option value="madurai">madurai</option>
+            <option value="covai">covai</option>
+        </select></td></tr>
+        
+        <tr><td><input type="Submit" value="Submit"></td></tr>
+        </table>
+    </form>
+    
+</body>
+</html>

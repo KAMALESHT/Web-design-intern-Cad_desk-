@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function show()
+        {
+            var num,even=0,odd=0;
+            for(var a=1;a<=5;a++)
+            {
+                num=parseInt(prompt("Enter the number"));
+                if(num%2==0)
+                {
+                    even++;
+                }
+                else{
+                    odd++;
+                }
+            }
+            document.write("total even no are:"+even);
+            document.write("total odd no are:"+odd);
+        }
+       
+    </script>
+
+</head>
+<body>
+    <button onclick="show()">click here!!</button>
+</body>
+</html>
