@@ -1,0 +1,32 @@
+<!DOCTYPE >
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        #slide,#sliding
+        {
+            background: lightblue;
+            text-align: center;
+            border: solid 1px;
+            padding: 5px;
+        }
+            
+        #sliding{
+            display: none;
+            padding: 50px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+             $("div").animate({left :'500px',height :'400px',width:'400px',opacity:'0.4'});
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Click me</button>
+    <div style="background: red; height: 100px; width: 100px;"></div>
+</body>
+</html>

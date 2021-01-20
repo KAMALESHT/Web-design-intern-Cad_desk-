@@ -1,0 +1,26 @@
+<!DOCTYPE >
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    </style>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function(){
+                $("p").hide("slow",function(){
+                    alert("this paragraph is removed");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>click me</button>
+    <p>hello there!!</p>
+
+    
+</body>
+
+</html>

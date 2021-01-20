@@ -1,0 +1,36 @@
+<!DOCTYPE >
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        #div1,#div2{
+            background: lightblue;
+            text-align: center;
+            padding: 5px;
+            border: solid 1px;
+            
+        }
+        #div2{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#div1").click(function(){
+             $("#div2").slideDown(5000);
+            });
+            $("button").click(function(){
+                $("#div2").stop();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>stop</button>
+    <div id="div1">Hii kamalesh!!</div>
+    <div id="div2">Have a Great Day....</div>
+ 
+</body>
+</html>
